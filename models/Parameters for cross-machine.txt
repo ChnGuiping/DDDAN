@@ -1,0 +1,64 @@
+
+    # Define parameters for cross-machine scenarios
+    scenarios = [
+        # scenarios1
+        {
+            'data_name': 'CWRU_JNU',
+            'src_frequery': 48000,
+            'tar_frequery': 50000,
+            'eps':0.2,
+            'data_dir': r'D:\Pycharm\Datas\CWRU',
+            'data_dir2': r'D:\Pycharm\Datas\JNU',
+            'transfer_task': [[0], [1]]
+        },
+        # scenarios2
+        {
+            'data_name': 'CWRU_SEU',
+            'src_frequery': 48000,
+            'tar_frequery': 5120,
+            'eps': 0.3,
+            'data_dir': r'D:\Pycharm\Datas\CWRU',
+            'data_dir2': r'D:\Pycharm\Datas\SEU',
+            'transfer_task': [[0], [0]]
+        },
+        # scenarios3
+        {
+            'data_name': 'JNU_CWRU',
+            'src_frequery': 50000,
+            'tar_frequery': 48000,
+            'eps': 0.1,
+            'data_dir': r'D:\Pycharm\Datas\JNU',
+            'data_dir2': r'D:\Pycharm\Datas\CWRU',
+            'transfer_task': [[1], [0]]
+        },
+        # scenarios4
+        {
+            'data_name': 'JNU_SEU',
+            'src_frequery': 50000,
+            'tar_frequery': 5120,
+            'eps': 0.1,
+            'data_dir': r'D:\Pycharm\Datas\JNU',
+            'data_dir2': r'D:\Pycharm\Datas\SEU',
+            'transfer_task': [[1], [0]]
+        },
+        # scenarios5
+        {
+            'data_name': 'SEU_CWRU',
+            'src_frequery': 5120,
+            'tar_frequery': 48000,
+            'eps': 0.3,
+            'data_dir': r'D:\Pycharm\Datas\SEU',
+            'data_dir2': r'D:\Pycharm\Datas\CWRU',
+            'transfer_task': [[0], [0]]
+        },
+        # scenarios6
+        {
+            'data_name': 'SEU_JNU',
+            'src_frequery': 5120,
+            'tar_frequery': 50000,
+            'eps': 0.2,
+            'data_dir': r'D:\Pycharm\Datas\SEU',
+            'data_dir2': r'D:\Pycharm\Datas\JNU',
+            'transfer_task': [[0], [1]]
+        }
+    ]

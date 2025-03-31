@@ -1,7 +1,7 @@
 # DDDAN
 
 
-This repository is the official implementation of [DDDAN: Deep conditional adversarial subdomain adaptation network for unsupervised mechanical fault diagnosis](https://ieeexplore.ieee.org/document/10003219) (ESWA 2025).
+This repository is the official implementation of [DDDAN: Deep discriminative domain adaptation network considering sampling frequency for cross-domain mechanical fault diagnosis](https://www.sciencedirect.com/science/article/pii/S0957417425009182) (ESWA 2025).
 
 
 

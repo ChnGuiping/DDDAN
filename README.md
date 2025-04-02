@@ -1,8 +1,6 @@
 # DDDAN
 
-
 This repository is the official implementation of [DDDAN: Deep discriminative domain adaptation network considering sampling frequency for cross-domain mechanical fault diagnosis](https://www.sciencedirect.com/science/article/pii/S0957417425009182) (ESWA 2025).
-
 
 
 ## Requirements
@@ -33,13 +31,12 @@ Part of the code refers to the following open source code:
 
 ## Citation
 ```
-@article{chen2024deep,
-  title={Deep conditional adversarial subdomain adaptation network for unsupervised mechanical fault diagnosis},
-  author={Chen, Guiping and Xiang, Dong and Liu, Tingting and Xu, Feng and Li, Wangsen},
-  journal={Knowledge-Based Systems},
-  volume={300},
-  pages={112180},
-  year={2024},
+@article{chen2025deep,
+  title={Deep discriminative domain adaptation network considering sampling frequency for cross-domain mechanical fault diagnosis},
+  author={Chen, Guiping and Xiang, Dong and Liu, Tingting and Xu, Feng and Fang, Ke},
+  journal={Expert Systems with Applications},
+  pages={127296},
+  year={2025},
   publisher={Elsevier}
 }
 ```

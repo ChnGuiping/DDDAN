@@ -51,7 +51,7 @@ class Laplace_fast(nn.Module):
         return torch.cat([Laplace_left, Laplace_right], dim=1).view(self.out_channels, 1, self.kernel_size)
 
 
-w
+
 # Without wavelet convolution layer
 class WCNN(nn.Module):
     def __init__(self, pretrained=False, in_channel=1, init_weights=True):

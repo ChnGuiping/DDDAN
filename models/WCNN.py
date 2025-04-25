@@ -113,7 +113,7 @@ class WCNN_EWK(nn.Module):
 
         self.eps = nn.Parameter(torch.empty(1).uniform_(0, 0.5), requires_grad=True)
         # self.eps = nn.Parameter(torch.randint(1, 5, (1,), dtype=torch.float32) / 10, requires_grad=True)
-        # self.eps = 64000
+        # self.eps = 0.1    # PU datasets, 64000 Hz
 
         self.layer1 = nn.Sequential(
             nn.Conv1d(in_channel, 64, kernel_size=64, stride=2),

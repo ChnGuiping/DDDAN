@@ -8,7 +8,7 @@ class LM_Softmax(nn.Module):
         super(LM_Softmax, self).__init__()
         self.num_classes = num_classes
         # self.m = torch.tensor([16], device='cuda')
-        self.s = torch.tensor([2], device='cuda')
+        # self.s = torch.tensor([2], device='cuda')
 
     def class_angle(self, output, label):
         if len(label) == 0:
@@ -16,7 +16,8 @@ class LM_Softmax(nn.Module):
 
         index = label[0]
 
-        self.m = output.abs().mean() / 8
+        self.s = output.abs().mean()
+        self.m = (output.std(unbiased=False)).detach()
 
         c = output[:, index]
         part1 = output[:, :index]

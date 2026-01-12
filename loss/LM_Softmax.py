@@ -16,7 +16,7 @@ class LM_Softmax(nn.Module):
 
         index = label[0]
 
-        c = output[:, index]
+        logits_c = output[:, index]
         part1 = output[:, :index]
         part2 = output[:, index + 1:]
 

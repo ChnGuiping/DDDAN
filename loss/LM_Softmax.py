@@ -7,24 +7,27 @@ class LM_Softmax(nn.Module):
     def __init__(self, num_classes):
         super(LM_Softmax, self).__init__()
         self.num_classes = num_classes
-        self.m = torch.tensor([0.1], device='cuda')
+        # self.m = torch.tensor([0.1], device='cuda')
         self.s = torch.tensor([1.05], device='cuda')
 
     def class_angle(self, output, label):
         if len(label) == 0:
             return output
 
+        m = output.std(unbiased=False).detach() * 0.1
+        
         index = label[0]
 
         logits_c = output[:, index]
         part1 = output[:, :index]
         part2 = output[:, index + 1:]
 
-        val = torch.where(
-            logits_c > 0,
-            (logits_c + logits_c * self.m) / self.s,
-            (logits_c - logits_c.abs() * self.m) * self.s
-        )
+        positive_mask = logits_c > 0
+        negative_mask = ~positive_mask
+
+        val = torch.zeros_like(logits_c)
+        val[positive_mask] = (logits_c[positive_mask] - m) / self.s
+        val[negative_mask] = (logits_c[negative_mask] - m) * self.s
 
         new_tensor = torch.cat((part1, val.unsqueeze(1), part2), dim=1)
         return new_tensor

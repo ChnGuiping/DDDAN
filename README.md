@@ -22,6 +22,7 @@ This repository is the official implementation of [DDDAN: Deep discriminative do
 - use the `train.py` to train
 - for example, use the following commands to test JDA_W for PHM with the transfer_task 0-->3
 - `python train.py --data_name PHM --data_dir D:/Data/PHM --transfer_task [0],[3] --last_batch True --distance_metric True --distance_loss JDA_W`
+- The parameter settings are subject to the current version.
 
 
 ## References

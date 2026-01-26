@@ -7,7 +7,6 @@ class LM_Softmax(nn.Module):
     def __init__(self, num_classes):
         super(LM_Softmax, self).__init__()
         self.num_classes = num_classes
-        # self.m = torch.tensor([0.1], device='cuda')
         self.s = torch.tensor([1.05], device='cuda')
 
     def class_angle(self, output, label):

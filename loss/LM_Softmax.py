@@ -14,7 +14,7 @@ class LM_Softmax(nn.Module):
         if len(label) == 0:
             return output
 
-        m = output.std(unbiased=False).detach() * 0.1
+        m = output.std(unbiased=False).detach() * 0.5
         
         index = label[0]
 
